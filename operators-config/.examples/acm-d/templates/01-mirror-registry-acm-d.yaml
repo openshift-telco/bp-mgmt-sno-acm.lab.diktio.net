@@ -1,0 +1,32 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mirror-registry-config-map
+  namespace: multicluster-engine
+data:
+  registries.conf: |
+    [[registry]]
+       prefix = ""
+       location = "registry.redhat.io/rhacm2"
+       mirror-by-digest-only = false
+
+       [[registry.mirror]]
+       location = "quay.io:443/acm-d"
+
+    [[registry]]
+       prefix = ""
+       location = "registry.redhat.io/multicluster-engine"
+       mirror-by-digest-only = false
+
+       [[registry.mirror]]
+       location = "quay.io:443/acm-d"
+
+    [[registry]]
+       prefix = ""
+       location = "registry.access.redhat.com/openshift4/ose-oauth-proxy"
+       mirror-by-digest-only = false
+
+       [[registry.mirror]]
+       location = "registry.redhat.io/openshift4/ose-oauth-proxy"
+
