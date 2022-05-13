@@ -20,7 +20,7 @@ spec:
       requests:
         storage: 50Gi
   osImages:
-    - openshiftVersion: {{ $.Values.mgmt.ai.os_images.osp_version | quote }}
+    - openshiftVersion: {{ $.Values.mgmt.ai.os_images.ocp_version | quote }}
       version: {{ $.Values.mgmt.ai.os_images.rhcos_version | quote }}
       cpuArchitecture: x86_64
       rootFSUrl: >-

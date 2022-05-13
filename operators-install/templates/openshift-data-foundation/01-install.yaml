@@ -26,7 +26,6 @@ spec:
   name: odf-lvm-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: odf-lvm-operator.v4.10.0
 ---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
@@ -39,4 +38,3 @@ spec:
   name: odf-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: odf-operator.v4.10.0
